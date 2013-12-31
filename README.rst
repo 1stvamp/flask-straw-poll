@@ -19,7 +19,7 @@ This app requires area data in the format:
 It was developed with Westminster Constituency data freely available from mapit.mysociety.org
 (under the terms of the `OS OpenData license <http://www.ordnancesurvey.co.uk/oswebsite/opendata/licence/>`_ and the `Open Government License <http://www.nationalarchives.gov.uk/doc/open-government-licence/open-government-licence.htm>`_).
 
-You can either create your own data set under `./flask_straw_poll/data/wmc.json`, copy the example data from `./flask_straw_poll/data/wmc.json.example`, or download it from mapit:
+You can either create your own data set under ``./flask_straw_poll/data/wmc.json``, copy the example data from ``./flask_straw_poll/data/wmc.json.example``, or download it from mapit:
 
 .. code-block:: bash
     
@@ -61,14 +61,14 @@ To get up and running with the demo quickly there is a bootstrap shell script wh
 Installation
 ------------
 
-The preferred way to install the app is via `pip`:
+The preferred way to install the app is via ``pip``:
 
 .. code-block:: bash
     
     $ pip install flask-straw-poll
 
 
-Or manually using a checkout of the code with `pip` inside a `virtualenv`
+Or manually using a checkout of the code with ``pip`` inside a ``virtualenv``
 
 .. code-block:: bash
     
@@ -90,7 +90,7 @@ To make quickly using the demo app faster (without setting up a WSGI serving env
      * Running on http://127.0.0.1:5000/
      * Restarting with reloader
 
-**Note**: If you installed the app as an egg via `pip` above, then you can use the CLI command `straw-poll-run` to invoke the runserver script.
+**Note**: If you installed the app as an egg via ``pip`` above, then you can use the CLI command ``straw-poll-run`` to invoke the runserver script.
 
 You can then access the app in a browser via `127.0.0.1:5000 <http://127.0.0.1:5000/>`_.
 
@@ -102,4 +102,4 @@ You should see something like:
 Tests
 -----
 
-A functional testsuite is provided in `tests.py` and can be run directly inside your venv with `python tests.py`.
+A functional testsuite is provided in ``tests.py`` and can be run directly inside your venv with ``python tests.py``.
