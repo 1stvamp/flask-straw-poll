@@ -14,7 +14,7 @@ This app requires area data in the format:
     
     {
       "id": { "name": "Placename" }
-    {
+    }
 
 It was developed with Westminster Constituency data freely available from mapit.mysociety.org
 (under the terms of the `OS OpenData license <http://www.ordnancesurvey.co.uk/oswebsite/opendata/licence/>`_ and the `Open Government License <http://www.nationalarchives.gov.uk/doc/open-government-licence/open-government-licence.htm>`_).
