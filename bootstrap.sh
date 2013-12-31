@@ -7,7 +7,7 @@ source ./venv/bin/activate
 echo 'Installing requirements..'
 pip install -r requirements.txt
 echo 'Creating DB models..'
-python flask_straw_poll/models.py
+python -c 'from flask_straw_poll.models import main; main()'
 echo 'Creating test data (parties)..'
-python -c 'from flask_straw_poll.models import create_test_data; create_test_data()'
+python -c 'from flask_straw_poll.utils import create_test_data; create_test_data()'
 echo 'Done.'

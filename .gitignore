@@ -39,3 +39,4 @@ nosetests.xml
 flask_straw_poll/data/wmc.json
 strawpoll.db
 config.json
+venv

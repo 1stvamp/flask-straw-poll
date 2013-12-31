@@ -3,6 +3,7 @@
 """
 from __future__ import print_function
 
+from sys import stdout, exit
 from flask.ext.sqlalchemy import SQLAlchemy
 
 from flask_straw_poll import app
@@ -42,8 +43,6 @@ class Vote(db.Model):
 
 
 def main():
-    db = init_db()
-
     print('Creating database elements with URI "{0}"..'.format(
             app.config['SQLALCHEMY_DATABASE_URI']), file=stdout)
 
