@@ -16,5 +16,10 @@ setup(
     install_requires=open('requirements.txt').readlines(),
     package_data={'flask_straw_poll/data': ['wmc.json.example']},
     include_package_data=True,
-    license='BSD'
+    license='BSD',
+    entry_points={
+    'console_scripts': [
+        'straw-poll-run = flask_straw_poll.runserver:main'
+        ]
+    }
 )

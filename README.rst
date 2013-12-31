@@ -57,6 +57,27 @@ To get up and running with the demo quickly there is a bootstrap shell script wh
     Copying config.json.example -> config.json
     Done.
 
+
+Installation
+------------
+
+The preferred way to install the app is via `pip`:
+
+.. code-block:: bash
+    
+    $ pip install flask-straw-poll
+
+
+Or manually using a checkout of the code with `pip` inside a `virtualenv`
+
+.. code-block:: bash
+    
+    $ cd flask-straw-poll
+    $ virtualenv --no-site-packages ./venv
+    $ source ./venv/bin/activate
+    $ pip install -r requirements.txt
+
+
 Usage
 -----
 
@@ -69,8 +90,16 @@ To make quickly using the demo app faster (without setting up a WSGI serving env
      * Running on http://127.0.0.1:5000/
      * Restarting with reloader
 
+**Note**: If you installed the app as an egg via `pip` above, then you can use the CLI command `straw-poll-run` to invoke the runserver script.
+
 You can then access the app in a browser via `127.0.0.1:5000 <http://127.0.0.1:5000/>`_.
 
 You should see something like:
 
 .. image:: https://f.cloud.github.com/assets/35831/1826756/3cc229d8-720c-11e3-9cac-8805ccba826d.png
+
+
+Tests
+-----
+
+A functional testsuite is provided in `tests.py` and can be run directly inside your venv with `python tests.py`.
