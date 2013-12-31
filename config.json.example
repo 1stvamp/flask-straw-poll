@@ -1,0 +1,8 @@
+{
+    "DEBUG": true,
+    "SECRET_KEY": "lolsekrit",
+    "BOOTSTRAP_USE_MINIFIED": true,
+    "BOOTSTRAP_USE_CDN": false,
+    "BOOTSTRAP_FONTAWESOME": true,
+    "BOOTSTRAP_CUSTOM_CSS": false
+}
