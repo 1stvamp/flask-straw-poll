@@ -27,7 +27,7 @@ You can either create your own data set under ``./flask_straw_poll/data/wmc.json
     $ curl http://mapit.mysociety.org/areas/WMC -o flask_straw_poll/data/wmc.json
     
     $ # Or use the example data
-    $ cp data/wmc.json.example data/wmc.json
+    $ cp flask_straw_poll/data/wmc.json.example flask_straw_poll/data/wmc.json
 
 
 Quick bootstrap script
