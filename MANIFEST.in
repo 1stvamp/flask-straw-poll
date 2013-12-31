@@ -1,5 +1,5 @@
 include README.rst
 include LICENSE
 include CHANGELOG
-include *.txt
+include config.json.example
 include flask_straw_poll/data/wmc.json.example
