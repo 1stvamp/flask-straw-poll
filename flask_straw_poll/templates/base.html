@@ -1,0 +1,12 @@
+{% extends "bootstrap_responsive.html" %}
+{% block title %}Partly Political Polling{% endblock title %}
+{% block style -%}
+    {{ super() }}
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/strawpoll.css') }}" rel="stylesheet">
+{%- endblock style %}
+{%- block bootstrap_js_bottom %}
+    {{ super() }}
+    <script src="{{ url_for('static', filename='js/chartify.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/strawpoll.js') }}"></script>
+{%- endblock bootstrap_js_bottom %}

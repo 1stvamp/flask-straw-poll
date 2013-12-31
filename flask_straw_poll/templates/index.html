@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block body_content %}
+    <div class="container-fluid">
+        <div class="row-fluid">
+        <div class="span12">
+            <h1>Partly Political Polling</h1>
+        </div>
+    </div>
+    </div>
+    <div class="row-fluid">
+      <div class="span6">
+          <h2>Votes by party (percent)</h2>
+          <table id="votes-by-party">
+            <thead>
+                <tr><td></td>{% for _, party in party_votes -%}
+                    <th>{{ party }}</th>
+                {%- endfor %}</tr>
+            </thead>
+            <tbody>
+                <tr><th>Votes</th>{% for votes, _ in party_votes -%}
+                    <td>{{ ((100 / total_votes) * votes)|round(2) }}</td>
+                {%- endfor %}</tr>
+            </tbody>
+          </table>
+      </div>
+      <div class="span6">
+          <h2>Votes by constituency (percent)</h2>
+          <table id="votes-by-constituency">
+            <thead>
+                <tr><td></td>{% for _, id in constituency_votes -%}
+                    <th>{{ wmc_data[id|string].name }}</th>
+                {%- endfor %}</tr>
+            </thead>
+            <tbody>
+                <tr><th>Votes</th>{% for votes, _ in constituency_votes -%}
+                    <td>{{ ((100 / total_votes) * votes)|round(2) }}</td>
+                {%- endfor %}</tr>
+            </tbody>
+          </table>
+      </div>
+  </div>
+  <div class="row-fluid">
+      <div class="span8">
+          {% if not session.voted %}
+            <h2>Cast your vote!</h2>
+            <form action="{{ url_for('create_vote') }}" method="post">
+                <label for="constituency_id">Constituency</label>
+                <select name="constituency_id">
+                    {% for id, wmc in wmc_data.iteritems() -%}
+                        <option value="{{ id }}">{{ wmc.name }}</option>
+                    {%- endfor %}
+                </select>
+                <label for="party_id">Party</label>
+                <select name="party_id">
+                    {% for party in parties -%}
+                        <option value="{{ party.id }}">{{ party.name }}</option>
+                    {%- endfor %}
+                </select>
+                <input type="submit"/>
+            </form>
+          {% endif %}
+      </div>
+  </div>
+{% endblock %}
