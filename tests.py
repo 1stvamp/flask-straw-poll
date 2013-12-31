@@ -17,7 +17,7 @@ import flask_straw_poll
 
 
 class StrawPollTestCase(unittest.TestCase):
-    
+
     def setUp(self):
         self.app = flask_straw_poll.app
         self.client = self.app.test_client()
